@@ -7,8 +7,190 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Badeanden</title>
 </head>
 <body>
+    <!-- <nav>
+        <div class="navbar">
+
+            <div class="col-md-3">
+                <img class="logo-img" src="/images/badeand-logo.jpeg" style="max-width: 50px;"/>
+
+            </div>
+            <div class="col-md-3">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                    categories
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                    <li><a class="dropdown-item" href="#">category1</a></li>
+                    <li><a class="dropdown-item" href="#">category2</a></li>
+                    <li><a class="dropdown-item" href="#">category3</a></li>
+
+                    </ul>
+                </div>
+                </div>
+                <div class="col-md-3">
+                    <h1 class="nav-header-text">SOME TITLE</h1>
+                </div>
+                <div class="col-md-3 log-in-basket">
+                    <div>
+                        <button href="#">Log in</button>
+                        <img class="basket-img" src="/images/basket-icon.png"/>
+                    </div> 
+                </div>
+            </div>
+     </nav> -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <img class="logo-img"src="/images/badeand-logo.jpeg" alt="">
+            <a class="navbar-brand" href="#!">Badeanden</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#!">All Products</a></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item" href="#!">Category X</a></li>
+                            <li><a class="dropdown-item" href="#!">Category X</a></li>
+                            <li><a class="dropdown-item" href="#!">Category X</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <button class="login-btn btn btn-outline-dark" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Login
+                    </button>  
+                     <button class="btn btn-outline-dark" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Cart
+                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="header">
+            <img class="header-img" src="/images/headerphoto.avif">
+        </div>
+    </header>
+    <!-- <div class="row category-items">
+        <div class="col-md-4 product-display">
+            <div>
+                <img class="product-img" src="/images/badeand-logo.jpeg" alt="category photo">
+            </div>
+            <div><h5>Category X</h5>
+            </div>
+        </div>
+        <div class="col-md-4 product-display">
+            <div>
+                <img class="product-img" src="/images/badeand-logo.jpeg" alt="category photo">
+            </div>
+            <div><h5>Category X</h5>
+            </div>
+        </div>
+        <div class="col-md-4 product-display">
+            <div>
+                <img class="product-img" src="/images/badeand-logo.jpeg" alt="category photo">
+            </div>
+            <div><h5>Category X</h5>
+            </div>
+        </div>
+    </div> -->
+
+    <section class="py-5">
+
+        <div class="container px-4 px-lg-5">
+            <div class="container row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                <div class="col">
+                    <div class="card">
+                        <!-- Product image-->
+                        <img class="product-img" src="/images/badeand-logo.jpeg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Category X</h5>
+                                <!-- Product price-->
+                                $40.00 - $80.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">See category</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <!-- Product image-->
+                        <img class="product-img" src="/images/badeand-logo.jpeg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Category X</h5>
+                                <!-- Product price-->
+                                $40.00 - $80.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">See category</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <!-- Product image-->
+                        <img class="product-img" src="/images/badeand-logo.jpeg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Category X</h5>
+                                <!-- Product price-->
+                                $40.00 - $80.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">See category</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="about-section row row-cols-1 row-cols-md-1 row-cols-lg-2">
+            <div class="col">
+                <img class="about-img" src="/images/rubber-duck.avif" alt="">
+            </div>
+            <div class="col">
+                <h4>
+                    LOREM IPSUM
+                </h4>
+                <p><span style="font-weight: bold;">Lorem Ipsum</span> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer bg-light text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2023 Copyright:
+          <span>Bade-Anden.dk</span>
+        </div>
+        <!-- Copyright -->
+      </footer>
 </body>
 </html>
