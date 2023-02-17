@@ -77,8 +77,19 @@ a {
     margin-right: 5px;
 }
 
-html {
-    height: 100%;
+/*General styling*/
+
+html, body{
+    height:100%;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.content {
+    flex-grow: 1;
 }
 
 
