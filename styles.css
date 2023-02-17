@@ -1,4 +1,3 @@
-
 /* Typografi */
 h1 {
     color: #000;
@@ -55,6 +54,27 @@ a {
     font-family:'Times New Roman', Times, serif;
     font-size: 16px;
     font-weight: 400;
+}
+
+/* Navigation bar*/
+
+.navbar{
+    background-color: lightblue;
+}
+.log-in-basket{
+    display: flex;
+    justify-content: end;
+}
+.logo-img{
+    width: 60px;
+}
+
+.basket-img{
+    width: 40px;
+}
+
+.login-btn{
+    margin-right: 5px;
 }
 
 /* Responsiveness for the various device types */
