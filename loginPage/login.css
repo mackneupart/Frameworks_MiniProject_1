@@ -1,5 +1,10 @@
 /* Body page setup */
-.login-body {
+body {
+    height: 100%;
+}
+
+/* Main page setup */
+.login-main {
     display: flex;
     align-items: center;
     height: 100%;
@@ -8,7 +13,7 @@
 }
 
 /* Form in the main body */
-.login-main {
+.login-section {
     max-width: 330px;
     margin: auto;
     width: 100%;
@@ -23,8 +28,4 @@
 .form-btn {
     width: 100%;
     border-radius: 10px;
-}
-
-html {
-    height: 100%;
 }
