@@ -1,86 +1,60 @@
-/* Typografi */
-h1 {
-    color: #000;
-    font-family:'Times New Roman', Times, serif;
-    font-size: 54px;
-    font-weight: 400;
+
+.navbar{
+    background-color: lightblue;
 }
 
-
-h2 {
-    color: #000;
-    font-family:'Times New Roman', Times, serif;
-    font-size: 48px;
-    font-weight: 400;
+.login-btn{
+    margin-right: 5px;
+}
+.logo-img{
+    width: 60px;
+}
+.basket-img{
+    width: 40px;
+}
+.header{
+    height: 70vh;
 }
 
-h3 {
-    color: #000;
-    font-family:'Times New Roman', Times, serif;
-    font-size: 40px;
-    font-weight: 400;
+.header-img{
+    width:100%;
+    height:100%;
 }
 
-h4 {
-    color: #000;
-    font-family:'Times New Roman', Times, serif;
-    font-size: 36px;
-    font-weight: 400;
+.log-in-basket{
+    display: flex;
+    justify-content: end;
 }
 
-h5 {
-    color: #000;
-    font-family:'Times New Roman', Times, serif;
-    font-size: 30px;
-    font-weight: 400;
+.category-items{
+display: flex;
+border: solid blue 3px;
+}
+.product-display{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: grey;
+
 }
 
-h6 {
-    color: #000;
-    font-family:'Times New Roman', Times, serif;
-    font-size: 26px;
-    font-weight: 400;
+.product-img{
+width: 250px;
+border-radius: 4px;
+margin-right: auto;
+margin-left: auto;
+margin-top: 15px;
 }
 
-p {
-    color: #000;
-    font-family:'Times New Roman', Times, serif;
-    font-size: 16px;
-    font-weight: 400;
+.about-img{
+max-width: 100%;
+}
+.about-section{
+    padding: 40px;
 }
 
-a {
-    color: darkblue;
-    font-family:'Times New Roman', Times, serif;
-    font-size: 16px;
-    font-weight: 400;
-}
-
-/* Responsiveness for the various device types */
-/* X-Small devices (portrait phones, less than 576px) */
-/* No media query for `xs` since this is the default in Bootstrap */
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
-    
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
-   
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
-   
-}
-
-/* X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
-   
-}
-
-/* XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) { 
-   
+.card{
+    margin-bottom: 15px;
 }
