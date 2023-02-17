@@ -7,8 +7,99 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../styles.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./product.css">
+    <title>Product 1</title>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <img class="logo-img" src="/images/badeand-logo.jpeg" alt="">
+            <a class="navbar-brand" href="./index.html">Badeanden</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Kategorier</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./productOverviewPage/productOverview.html">Alle
+                                    produkter</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="./productOverviewPage/productOverview.html">Erhverv</a>
+                            </li>
+                            <li><a class="dropdown-item" href="./productOverviewPage/productOverview.html">Fastelavn</a>
+                            </li>
+                            <li><a class="dropdown-item" href="./productOverviewPage/productOverview.html">Diverse</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#!">Om Badeanden</a></li>
+                </ul>
+                <form action="./loginPage/login.html" class="d-flex">
+                    <button class="login-btn btn btn-outline-dark" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Login
+                    </button>
+                </form>
+                <form action="./cartPage/cart.html" class="d-flex">
+                    <button class="btn btn-outline-dark" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Kurv
+                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <main class="product-main">
+        <div class="container px-4 px-lg-5">
+            <nav>
+                <ol class="breadcrumbs">
+                    <li class="breadcrumb-item"><a href="../productOverviewPage/productOverview.html">Alle produkter</a></li>
+                    <li class="active breadcrumb-item"><a href="./product.html">Produkt 1</a></li>
+                </ol>
+            </nav>
+            <div class="row">
+                <div class="col-xs-12 col-md-7">
+                    <div>
+                        <img class="product-image" src="../images/badeand-logo.jpeg" alt="">
+                    </div>
+                    <!-- <ul class="image-list">
+                        <li><img src="../images/badeand-logo.jpeg" alt=""></li>
+                        <li><img src="../images/badeand-logo.jpeg" alt=""></li>
+                        <li><img src="../images/badeand-logo.jpeg" alt=""></li>
+                    </ul> -->
+                </div>
+                <div class="col-xs-12 col-md-5">
+                    <h1>Product 1</h1>
+                    <h3>1000,- kr.</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit molestias id ipsa necessitatibus obcaecati neque temporibus cumque. Velit eaque nam mollitia laudantium necessitatibus, adipisci vel quos esse, earum accusamus asperiores!</p>
+                    <button class="btn btn-outline-dark" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Køb
+                        <span class="badge bg-dark text-white ms-1 rounded-pill"><img src="../images/basket-icon.png" alt=""></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main> 
+    <footer class="footer bg-light text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2023 Copyright:
+            <span>Bade-Anden.dk</span>
+            <form action="./styleguide.html" class="d-flex">
+                <button class="login-btn btn btn-outline-dark" type="submit">
+                    <i class="bi-cart-fill me-1"></i>
+                    Styleguide overview
+                </button>
+            </form>
+        </div>
+        <!-- Copyright -->
+    </footer>
 </body>
 </html>
