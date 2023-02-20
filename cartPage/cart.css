@@ -4,4 +4,18 @@ margin-top: 80px;
 }
 .purchase-item{
     display: flex;
+    margin-top: 15px;
+}
+
+
+.container-cart{
+    border: solid red 2px;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+.title-cart{
+    color: grey;
+    margin-left: 20%;
+    margin-top: 80px;
 }
