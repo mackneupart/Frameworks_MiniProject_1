@@ -14,13 +14,14 @@ function myFunction() {
 function addUserName() {
   const userName = window.localStorage.getItem("name");
   if (userName !== null) {
-    document.getElementById("message").innerHTML = "hello " + userName + "!";
+    document.getElementById("welcome-text").innerHTML =
+      "Goddag " + userName + "!";
     let x = document.getElementById("login-btn");
     x.style.display = "none";
     let y = document.getElementById("logout-btn");
     y.style.display = "block";
   } else {
-    document.getElementById("message").innerHTML = "";
+    document.getElementById("welcome-text").innerHTML = "";
     let x = document.getElementById("logout-btn");
     x.style.display = "none";
   }
