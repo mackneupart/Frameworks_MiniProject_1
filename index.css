@@ -43,3 +43,8 @@ max-width: 100%;
 .card{
     margin-bottom: 15px;
 }
+
+.logout-btn{
+    margin-right: 5px;
+    display: none;
+}
