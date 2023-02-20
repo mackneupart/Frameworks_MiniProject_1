@@ -43,3 +43,11 @@ a {
 a:hover {
     color: darkgray;
 }
+
+.badge img {
+    height: 1.8rem;
+}
+
+.second-box {
+    display: flex;
+}
