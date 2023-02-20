@@ -38,9 +38,9 @@ h5 {
 }
 
 h6 {
-    color: #000;
+    color: #ED5A00;
     font-family: 'Kanit', sans-serif;
-    font-size: 26px;
+    font-size: 30px;
     font-weight: 400;
 }
 
@@ -65,8 +65,13 @@ a:hover {
 /* Navigation bar*/
 
 .navbar{
-    background-color: lightblue;
+    background-color: #E8EDDF;
 }
+
+.nav-link {
+    color: #333533
+}
+
 .log-in-basket{
     display: flex;
     justify-content: end;
