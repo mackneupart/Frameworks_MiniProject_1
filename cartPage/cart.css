@@ -1,0 +1,7 @@
+.cart-box{
+justify-content: center;
+margin-top: 80px;
+}
+.purchase-item{
+    display: flex;
+}
