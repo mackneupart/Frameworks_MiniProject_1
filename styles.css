@@ -64,6 +64,43 @@ a {
     font-weight: 400;
 }
 
+/* Navigation bar*/
+
+.navbar{
+    background-color: lightblue;
+}
+.log-in-basket{
+    display: flex;
+    justify-content: end;
+}
+.logo-img{
+    width: 60px;
+}
+
+.basket-img{
+    width: 40px;
+}
+
+.login-btn{
+    margin-right: 5px;
+}
+
+/*General styling*/
+
+html, body{
+    height:100%;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+
 /* Responsiveness for the various device types */
 /* X-Small devices (portrait phones, less than 576px) */
 /* No media query for `xs` since this is the default in Bootstrap */
