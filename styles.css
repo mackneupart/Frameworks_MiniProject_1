@@ -1,7 +1,15 @@
 /* Typografi */
+@font-face {
+    font-family: "AktivGrotesk";
+    src: url('./font/OTF/AktivGrotesk-Light.otf');
+    src: url('./font/OTF/AktivGrotesk-Light.otf') format('PrimaryFont'),
+        url('./font/OTF/AktivGrotesk-XBold.otf') format('AktivGroteskXbold'),
+        url('./font/OTF/AktivGrotesk-HairlineItalic.otf') format('AktivGroteskItalic');
+}
+
 h1 {
     color: #000;
-    font-family:'Times New Roman', Times, serif;
+    font-family: "AktivGrotesk", 'AktivGroteskXbold';
     font-size: 54px;
     font-weight: 400;
 }
