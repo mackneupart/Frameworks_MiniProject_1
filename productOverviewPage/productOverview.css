@@ -1,0 +1,12 @@
+.card{
+    margin-bottom: 20px;
+}
+.category-heading{
+    margin-left:25px;
+}
+
+.card .btn:hover{
+    background-color: rgb(255, 230, 5);
+    color: black;
+
+}

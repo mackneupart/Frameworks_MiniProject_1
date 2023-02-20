@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="index.css">
-    <title>Badeanden</title>
-</head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./productOverview.css">
 
+    <title>Document</title>
+</head>
 <body>
+    <div class="wrapper">
+
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container px-4 px-lg-5">
             <img class="logo-img" src="/images/badeand-logo.jpeg" alt="">
-            <a class="navbar-brand" href="./index.html">Badeanden</a>
+            <a class="navbar-brand" href="../index.html">Badeanden</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -29,28 +28,28 @@
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">Kategorier</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="./productOverviewPage/productOverview.html">Alle
+                            <li><a class="dropdown-item" href="productOverview.html">Alle
                                     produkter</a></li>
                             <li>
                                 <hr class="dropdown-divider" />
                             </li>
-                            <li><a class="dropdown-item" href="./productOverviewPage/erhvervOverview.html">Erhverv</a>
+                            <li><a class="dropdown-item" href="./erhvervOverview.html">Erhverv</a>
                             </li>
-                            <li><a class="dropdown-item" href="./productOverviewPage/fastelavnOverview.html">Fastelavn</a>
+                            <li><a class="dropdown-item" href="./fastelavnOverview.html">Fastelavn</a>
                             </li>
-                            <li><a class="dropdown-item" href="./productOverviewPage/diverseOverview.html">Diverse</a>
+                            <li><a class="dropdown-item" href="./diverseOverview.html">Diverse</a>
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="#!">Om Badeanden</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Om Badeanden</a></li>
                 </ul>
-                <form action="./loginPage/login.html" class="d-flex">
+                <form action="../loginPage/login.html" class="d-flex">
                     <button class="login-btn btn btn-outline-dark" type="submit">
                         <i class="bi-cart-fill me-1"></i>
                         Login
                     </button>
                 </form>
-                <form action="./cartPage/cart.html" class="d-flex">
+                <form action="../cartPage/cart.html" class="d-flex">
                     <button class="btn btn-outline-dark" type="submit">
                         <i class="bi-cart-fill me-1"></i>
                         Kurv
@@ -60,55 +59,28 @@
             </div>
         </div>
     </nav>
-    <header>
-        <div class="header">
-            <img class="header-img" src="/images/headerphoto.avif">
-        </div>
-    </header>
-    <!-- <div class="row category-items">
-        <div class="col-md-4 product-display">
-            <div>
-                <img class="product-img" src="/images/badeand-logo.jpeg" alt="category photo">
-            </div>
-            <div><h5>Category X</h5>
-            </div>
-        </div>
-        <div class="col-md-4 product-display">
-            <div>
-                <img class="product-img" src="/images/badeand-logo.jpeg" alt="category photo">
-            </div>
-            <div><h5>Category X</h5>
-            </div>
-        </div>
-        <div class="col-md-4 product-display">
-            <div>
-                <img class="product-img" src="/images/badeand-logo.jpeg" alt="category photo">
-            </div>
-            <div><h5>Category X</h5>
-            </div>
-        </div>
-    </div> -->
 
-    <section class="py-5">
+    <section class="content py-5">
 
         <div class="container px-4 px-lg-5">
-            <div class="container row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            <h2 class="category-heading">Erhverv</h2>
+            <div class="container row row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-5">
                 <div class="col">
                     <div class="card">
                         <!-- Product image-->
-                        <img class="product-img" src="/images/badeand-logo.jpeg" alt="..." />
+                        <img class="product-img" src="/images/products/and1.jpeg" alt="..." />
                         <!-- Product details-->
                         <div class="card-body">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">Category X</h5>
+                                <h5 class="fw-bolder">Duck X</h5>
                                 <!-- Product price-->
-                                $40.00 - $80.00
+                                10 kr
                             </div>
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">See category</a>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Se produkt</a>
                             </div>
                         </div>
                     </div>
@@ -116,19 +88,19 @@
                 <div class="col">
                     <div class="card">
                         <!-- Product image-->
-                        <img class="product-img" src="/images/badeand-logo.jpeg" alt="..." />
+                        <img class="product-img" src="/images/products/and2.jpeg" alt="..." />
                         <!-- Product details-->
                         <div class="card-body">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">Category X</h5>
+                                <h5 class="fw-bolder">Duck X</h5>
                                 <!-- Product price-->
-                                $40.00 - $80.00
+                                10 kr
                             </div>
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">See category</a>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Se produkt</a>
                             </div>
                         </div>
                     </div>
@@ -136,62 +108,39 @@
                 <div class="col">
                     <div class="card">
                         <!-- Product image-->
-                        <img class="product-img" src="/images/badeand-logo.jpeg" alt="..." />
+                        <img class="product-img" src="/images/products/and3.jpeg" alt="..." />
                         <!-- Product details-->
                         <div class="card-body">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">Category X</h5>
+                                <h5 class="fw-bolder">Duck X</h5>
                                 <!-- Product price-->
-                                $40.00 - $80.00
+                                10 kr
                             </div>
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">See category</a>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Se produkt</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     </section>
-
-    <section>
-        <div class="about-section row row-cols-1 row-cols-md-1 row-cols-lg-2">
-            <div class="col">
-                <img class="about-img" src="/images/rubber-duck.avif" alt="">
-            </div>
-            <div class="col">
-                <h4>
-                    LOREM IPSUM
-                </h4>
-                <p><span style="font-weight: bold;">Lorem Ipsum</span> is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                    survived not only five centuries, but also the leap into electronic typesetting, remaining
-                    essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-                    containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-                    PageMaker including versions of Lorem Ipsum</p>
-                <a href="https://da.wikipedia.org/wiki/Badeand">Lær mere om badeanden</a>
-            </div>
-        </div>
-    </section>
-
     <footer class="footer bg-light text-center text-lg-start">
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             © 2023 Copyright:
             <span>Bade-Anden.dk</span>
-            <form action="./styleguide.html" class="d-flex">
+            <!-- <form action="../styleguide.html" class="d-flex">
                 <button class="login-btn btn btn-outline-dark" type="submit">
                     <i class="bi-cart-fill me-1"></i>
                     Styleguide overview
                 </button>
-            </form>
+            </form> -->
         </div>
         <!-- Copyright -->
     </footer>
+</div>
 </body>
-
 </html>
