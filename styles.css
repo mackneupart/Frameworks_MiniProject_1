@@ -1,15 +1,9 @@
 /* Typografi */
-@font-face {
-    font-family: "AktivGrotesk";
-    src: url('./font/OTF/AktivGrotesk-Light.otf');
-    src: url('./font/OTF/AktivGrotesk-Light.otf') format('PrimaryFont'),
-        url('./font/OTF/AktivGrotesk-XBold.otf') format('AktivGroteskXbold'),
-        url('./font/OTF/AktivGrotesk-HairlineItalic.otf') format('AktivGroteskItalic');
-}
+
 
 h1 {
     color: #000;
-    font-family: "AktivGrotesk", 'AktivGroteskXbold';
+    font-family: 'Kanit', sans-serif;
     font-size: 54px;
     font-weight: 400;
 }
@@ -17,51 +11,55 @@ h1 {
 
 h2 {
     color: #000;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Kanit', sans-serif;
     font-size: 48px;
     font-weight: 400;
 }
 
 h3 {
     color: #000;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Kanit', sans-serif;
     font-size: 40px;
     font-weight: 400;
 }
 
 h4 {
     color: #000;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Kanit', sans-serif;
     font-size: 36px;
     font-weight: 400;
 }
 
 h5 {
     color: #000;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Kanit', sans-serif;
     font-size: 30px;
     font-weight: 400;
 }
 
 h6 {
     color: #000;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Kanit', sans-serif;
     font-size: 26px;
     font-weight: 400;
 }
 
 p {
     color: #000;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Kanit', sans-serif;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 200;
 }
 
 a {
-    color: darkblue;
-    font-family:'Times New Roman', Times, serif;
+    color: #ED5A00;
+    font-family: 'Kanit', sans-serif;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 200;
+}
+
+a:hover {
+    color: #f4965be0;
 }
 
 /* Navigation bar*/
@@ -81,8 +79,54 @@ a {
     width: 40px;
 }
 
-.login-btn{
+.YellowButton{
+    background-color: #F2BD2C;
+    color: #333533;
+    border-radius: 30px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
     margin-right: 5px;
+}
+
+.YellowButton:hover {
+    background-color: #e6c97a;
+    color: #4b4e4b;
+}
+
+.WhiteButton{
+    background-color: #ffffff;
+    color: #333533;
+    border-radius: 30px;
+    border-color: #333533;
+    border-width: 1.5px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-right: 5px;
+}
+
+.WhiteButton:hover {
+    background-color: #a1a1a1;
+    color: #ffffff;
+    border-color: #807d7d;
+}
+
+.BlackButton{
+    background-color: #333533;
+    color: #ffffff;
+    border-radius: 30px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-right: 5px;
+}
+
+.BlackButton:hover {
+    background-color: #ffffff;
+    color: #333533;
+    border-color: #807d7d;
+    border-width: 1.5px;
 }
 
 /*General styling*/
@@ -129,3 +173,4 @@ html, body{
 @media (min-width: 1400px) { 
    
 }
+
