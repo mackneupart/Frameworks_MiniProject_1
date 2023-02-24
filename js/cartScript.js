@@ -29,6 +29,8 @@ document.getElementById('AddProduct').addEventListener('click', function() {
   // store the updated product count and cart data in local storage
   localStorage.setItem('productCount', productCount);
   localStorage.setItem('cartData', JSON.stringify(cartData));
+
+
 });
 
 // add a click event listener to the display button
@@ -40,4 +42,43 @@ document.getElementById('display-btn').addEventListener('click', function() {
   console.log(JSON.parse(localStorage.getItem('cartData')));
 });
 
+
+
 });
+
+function updateCartItems(){
+  let productItmes = localStorage.cartData;
+  console.log(productItmes);
+  var inputElement = '<li class="product-item d-flex justify-content-between lh-condensed"> <div class="purchase-item"><div><img src="/images/products/and1.jpeg" width="120px"></div><div><p class="product-name">BADEAND X</p><p class="text-muted">ID: 127</p><button>fjern fra kurv</button></div></div><span>1</span><span>40 dkk</span></li>';
+  // for (let index = 0; index < productItmes.length; index++) {
+  //   inputElement = inputElement + inputElement
+  // }
+  // document.getElementById('product-update-script').innerHTML = inputElement;
+
+
+  var newdiv;
+  let productUpdateScript = document.getElementById('product-update-script')
+  for(let index = 0; index < productItmes.length; index++) {
+    newdiv = document.createElement('div');
+    newdiv.setAttribute('id', productUpdateScript)
+    newdiv.innerHTML = '<li class="product-item d-flex justify-content-between lh-condensed"> <div class="purchase-item"><div><img src="/images/products/and1.jpeg" width="120px"></div><div><p class="product-name">BADEAND X</p><p class="text-muted">ID: 127</p><button>fjern fra kurv</button></div></div><span>1</span><span>40 dkk</span></li>';
+    document.body.appendChild(newdiv);
+  }
+
+
+  // function gengrid()
+  // {
+  //     let num_stud=8;
+  //     let newdiv;
+  //     let divIdName;
+  //     for(let i=1; i<=num_stud; i++)
+  //     {
+  //         newdiv = document.createElement('div');
+  //         divIdName = '50'+i;
+  //         newdiv.setAttribute('id',divIdName);
+  //         newdiv.innerHTML ='<div id="box'+i+'">Testing 123</div>';
+  //         document.body.appendChild(newdiv);
+  //     }
+  // }
+
+}
