@@ -29,17 +29,9 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("productCount", productCount);
     localStorage.setItem("cartData", JSON.stringify(cartData));
   });
-
-  // add a click event listener to the display button
-  document.getElementById("display-btn").addEventListener("click", function () {
-    // display the value of the number button in the console
-    console.log(productCount);
-
-    // display the cart data in the console
-    console.log(JSON.parse(localStorage.getItem("cartData")));
-  });
 });
 
+// Updating the items of products on the cart page -> the functions is being run on the cart.html page
 function updateCartItems() {
   let productItmes = JSON.parse(localStorage.cartData);
   let newdiv;
