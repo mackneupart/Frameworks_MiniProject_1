@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="./productOverview.css">
-
+    <script src="../script.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -25,28 +25,39 @@
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">Kategorier</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Alle
+                            <li><a class="dropdown-item" href="../productOverviewPage/productOverview.html">Alle
                                     produkter</a></li>
                             <li>
                                 <hr class="dropdown-divider" />
                             </li>
-                            <li><a class="dropdown-item" href="erhvervOverview.html">Erhverv</a>
+                            <li><a class="dropdown-item" href="../productOverviewPage/erhvervOverview.html">Erhverv</a>
                             </li>
-                            <li><a class="dropdown-item" href="./fastelavnOverview.html">Fastelavn</a>
+                            <li><a class="dropdown-item" href="../productOverviewPage/fastelavnOverview.html">Fastelavn</a>
                             </li>
-                            <li><a class="dropdown-item" href="./diverseOverview.html">Diverse</a>
+                            <li><a class="dropdown-item" href="../productOverviewPage/diverseOverview.html">Diverse</a>
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="#">Om Badeanden</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">Om Badeanden</a></li>
                 </ul>
+                <h6 class="welcome-text"id="welcome-text">error</h6>
                 <form action="../loginPage/login.html" class="d-flex">
-                    <button class="login-btn btn btn-outline-dark" type="submit">
+                    <button class="login-btn btn btn-outline-dark" type="submit" id="login-btn">
                         <i class="bi-cart-fill me-1"></i>
                         Login
                     </button>
                 </form>
-                <form action="./cartPage/cart.html" class="d-flex">
+                <button class="logout-btn btn btn-outline-dark" id="logout-btn" onclick="logout()">
+                    <i class="bi-cart-fill me-1"></i>
+                    Logout
+                </button>
+
+                <!-- Kurv icon i stedet for knap <div>
+                   <a href="./cartPage/cart.html"><img src="./images/basket-icon.png" width="40px"></a> 
+                    <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+
+                </div> -->
+                <form action="../cartPage/cart.html" class="d-flex">
                     <button class="btn btn-outline-dark" type="submit">
                         <i class="bi-cart-fill me-1"></i>
                         Kurv
@@ -479,5 +490,8 @@
         </div>
         <!-- Copyright -->
     </footer>
+    <script>
+        document.body.onload = addUserName();
+    </script>
 </body>
 </html>

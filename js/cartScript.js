@@ -43,7 +43,42 @@ function updateCartItems() {
     divIdName = i;
     newdiv.setAttribute("id", divIdName);
     newdiv.innerHTML =
-      '<li class="product-item d-flex justify-content-between lh-condensed"> <div class="purchase-item"><div><img src="/images/products/and1.jpeg" width="120px"></div><div><p class="product-name">'+title+'</p><p class="text-muted">ID: 127</p><button>fjern fra kurv</button></div></div><span>1</span><span>'+price+'</span></li>';
+      '<li class="product-item d-flex justify-content-between lh-condensed"> <div class="purchase-item"><div><img src="/images/products/and1.jpeg" width="120px"></div><div><p class="product-name">' +
+      title +
+      '</p><p class="text-muted">ID: 127</p><button onclick="removeItem()">fjern fra kurv</button></div></div><span>1</span><span>' +
+      price +
+      "</span></li>";
     document.getElementById("product-update-script").appendChild(newdiv);
   }
+}
+
+//sletter lige pt alle elementerne fra kurven
+function removeItem() {
+  let productItmes = JSON.parse(localStorage.cartData);
+  for (let i = 0; i < productItmes.length; i++) {
+    let d = document.getElementById("product-update-script");
+    let d_nested = document.getElementById(i);
+    d.removeChild(d_nested);
+  }
+}
+
+function addUserName() {
+  const userName = window.localStorage.getItem("name");
+  if (userName !== null) {
+    document.getElementById("welcome-text").innerHTML =
+      "Goddag " + userName + "!";
+    let x = document.getElementById("login-btn");
+    x.style.display = "none";
+    let y = document.getElementById("logout-btn");
+    y.style.display = "block";
+  } else {
+    document.getElementById("welcome-text").innerHTML = "";
+    let x = document.getElementById("logout-btn");
+    x.style.display = "none";
+  }
+}
+
+function getData() {
+  updateCartItems();
+  addUserName();
 }
