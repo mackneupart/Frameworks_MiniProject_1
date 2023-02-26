@@ -8,7 +8,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="./productOverview.css">
-    <script src="../script.js"></script>
+    <script type="text/javascript" src="../script.js"></script>
+    <script type="text/javascript" src="../js/cartScript.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -40,7 +41,7 @@
                     </li>
                     <li class="nav-item"><a class="nav-link" href="#!">Om Badeanden</a></li>
                 </ul>
-                <h6 class="welcome-text"id="welcome-text">error</h6>
+                <span class="welcome-text"id="welcome-text">error</span>
                 <form action="../loginPage/login.html" class="d-flex">
                     <button class="login-btn btn btn-outline-dark" type="submit" id="login-btn">
                         <i class="bi-cart-fill me-1"></i>
@@ -61,7 +62,7 @@
                     <button class="btn btn-outline-dark" type="submit">
                         <i class="bi-cart-fill me-1"></i>
                         Kurv
-                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                        <span id="basketNumber" class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                     </button>
                 </form>
             </div>
@@ -490,8 +491,6 @@
         </div>
         <!-- Copyright -->
     </footer>
-    <script>
-        document.body.onload = addUserName();
-    </script>
+    <script>document.body.onload = addUserName();</script>
 </body>
 </html>

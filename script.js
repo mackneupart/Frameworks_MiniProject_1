@@ -11,6 +11,7 @@ function myFunction() {
     x.style.display = "none";
   }
 }
+
 function addUserName() {
   const userName = window.localStorage.getItem("name");
   if (userName !== null) {
