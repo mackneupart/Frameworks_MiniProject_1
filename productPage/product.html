@@ -12,6 +12,8 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="./product.css">
+    <script type="text/javascript" src="../script.js"></script>
+    <script type="text/javascript" src="../js/cartScript.js"></script>
     <title>Product 1</title>
 </head>
 
@@ -44,17 +46,22 @@
                     </li>
                     <li class="nav-item"><a class="nav-link" href="#!">Om Badeanden</a></li>
                 </ul>
+                <span class="welcome-text"id="welcome-text">error</span>
                 <form action="../loginPage/login.html" class="d-flex">
-                    <button class="login-btn btn btn-outline-dark" type="submit">
+                    <button class="login-btn btn btn-outline-dark" type="submit" id="login-btn">
                         <i class="bi-cart-fill me-1"></i>
                         Login
                     </button>
                 </form>
+                <button class="logout-btn btn btn-outline-dark" id="logout-btn" onclick="logout()">
+                    <i class="bi-cart-fill me-1"></i>
+                    Logout
+                </button>
                 <form action="../cartPage/cart.html" class="d-flex">
                     <button class="btn btn-outline-dark" type="submit">
                         <i class="bi-cart-fill me-1"></i>
                         Kurv
-                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                        <span id="basketNumber" class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                     </button>
                 </form>
             </div>
@@ -76,25 +83,20 @@
                     <div>
                         <img class="product-image" src="../images/badeand-logo.jpeg" alt="">
                     </div>
-                    <!-- <ul class="image-list">
-                        <li><img src="../images/badeand-logo.jpeg" alt=""></li>
-                        <li><img src="../images/badeand-logo.jpeg" alt=""></li>
-                        <li><img src="../images/badeand-logo.jpeg" alt=""></li>
-                    </ul> -->
                 </div>
 
                 <!-- Text box with description, prices and buy button -->
                 <div class="col-xs-12 col-md-5 second-box">
                     <div class="row">
                         <div class="col col-12">
-                            <h1>Product 1</h1>
-                            <h3>1000,- kr.</h3>
+                            <h1 id="product-title">Product 1</h1>
+                            <h3 id="product-price">1000,- kr.</h3>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit molestias id ipsa
                                 necessitatibus obcaecati neque temporibus cumque. Velit eaque nam mollitia laudantium
                                 necessitatibus, adipisci vel quos esse, earum accusamus asperiores!</p>
                         </div>
                         <div class="col col-12 align-self-end">
-                            <button class="btn btn-outline-dark col-md-5" type="submit">
+                            <button id="AddProduct" class="btn btn-outline-dark col-md-5" type="submit">
                                 <i class="bi-cart-fill me-1"></i>
                                 Køb
                                 <span class="badge bg-dark text-white ms-1 rounded-pill"><img
@@ -234,6 +236,6 @@
         </div>
         <!-- Copyright -->
     </footer>
+    <script>document.body.onload = addUserName();</script>
 </body>
-
 </html>
