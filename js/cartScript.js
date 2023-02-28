@@ -1,5 +1,18 @@
 // Waiting to load the js file until the HTML file is done.
 document.addEventListener("DOMContentLoaded", function () {
+  // Get the URL parameters
+  const urlParams = new URLSearchParams(window.location.search);
+
+  // Retrieve the productName and productPrice values
+  const productName = urlParams.get("productName");
+  const productPrice = urlParams.get("productPrice");
+  const productImgSrc = urlParams.get("productImgSrc");
+  console.log(productImgSrc);
+
+  document.getElementById("product-title").innerText = productName;
+  document.getElementById("product-price").innerText = productPrice;
+  document.querySelector(".product-img").setAttribute("src", productImgSrc);
+
   // get the number button element
   const numberBtn = document.getElementById("basketNumber");
 
@@ -76,6 +89,10 @@ function addUserName() {
     let x = document.getElementById("logout-btn");
     x.style.display = "none";
   }
+}
+function saveData() {
+  let name = document.getElementById("productName");
+  let price = document.getElementById("productPrice");
 }
 
 function getData() {
