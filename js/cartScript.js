@@ -31,12 +31,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // retrieve the title and price of the product
     const title = document.getElementById("product-title").innerText;
     const price = document.getElementById("product-price").innerText;
+    const img = productImgSrc;
 
     // retrieve the existing cart data from local storage, or initialize it to an empty array if it's not present
     let cartData = JSON.parse(localStorage.getItem("cartData")) || [];
 
     // add the current product to the cart data array
-    cartData.push({ title: title, price: price });
+    cartData.push({ title: title, price: price, img: img });
 
     // store the updated product count and cart data in local storage
     localStorage.setItem("productCount", productCount);
@@ -52,15 +53,12 @@ function updateCartItems() {
   for (let i = 0; i < productItmes.length; i++) {
     let title = productItmes[i].title;
     let price = productItmes[i].price;
+    let img = productItmes[i].img;
     newdiv = document.createElement("div");
     divIdName = i;
     newdiv.setAttribute("id", divIdName);
-    newdiv.innerHTML =
-      '<li class="product-item d-flex justify-content-between lh-condensed"> <div class="purchase-item"><div><img src="/images/products/and1.jpeg" width="120px"></div><div><p class="product-name">' +
-      title +
-      '</p><p class="text-muted">ID: 127</p><button onclick="removeItem()">fjern fra kurv</button></div></div><span>1</span><span>' +
-      price +
-      "</span></li>";
+    newdiv.innerHTML = `<li class="product-item d-flex justify-content-between lh-condensed"> <div class="purchase-item"><div><img src="${img}" width="120px"></div><div><p class="product-name">${title}</p><p class="text-muted">ID: 127</p><button onclick="removeItem()">fjern fra kurv</button></div></div><span>1</span><span>
+      ${price}</span></li>`;
     document.getElementById("product-update-script").appendChild(newdiv);
   }
 }
