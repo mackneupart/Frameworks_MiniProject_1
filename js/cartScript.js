@@ -61,6 +61,18 @@ function updateCartItems() {
       ${price}</span></li>`;
     document.getElementById("product-update-script").appendChild(newdiv);
   }
+  getTotalAmount();
+}
+
+function getTotalAmount() {
+  let productItmes = JSON.parse(localStorage.cartData);
+  let totalAmount = 0;
+  for (let i = 0; i < productItmes.length; i++) {
+    let price = productItmes[i].price;
+    let intPrice = parseInt(price);
+    totalAmount += intPrice;
+  }
+  document.getElementById("totalAmount").innerText = totalAmount;
 }
 
 //sletter lige pt alle elementerne fra kurven
