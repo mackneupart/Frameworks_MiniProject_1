@@ -64,12 +64,37 @@ a:hover {
 
 /* Navigation bar*/
 
+.logo-type{
+    color: #000;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.navbar-brand {
+    color: rgb(0, 0, 0) !important;
+    font-family: 'Mynerve', cursive;
+    font-style: oblique;
+    font-size: 24px;
+}
+
+
 .navbar{
-    background-color: #E8EDDF;
+    background-color: #F2BD2C !important;
 }
 
 .nav-link {
-    color: #333533
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000 !important;
+    margin-right: 5px;
+    border-radius: 30px;
+
+}
+
+.nav-link:hover{
+    background-color: #F7D778;
+    color: #000;
+    border-radius: 30px;
+    font-weight: 400;
+    margin-right: 5px;
 }
 
 .log-in-basket{
@@ -77,7 +102,7 @@ a:hover {
     justify-content: end;
 }
 .logo-img{
-    width: 60px;
+    width: 35px;
 }
 
 .basket-img{
@@ -86,17 +111,17 @@ a:hover {
 
 .YellowButton{
     background-color: #F2BD2C;
-    color: #333533;
+    color: #000;
     border-radius: 30px;
-    font-family: 'Kanit', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
     font-weight: 400;
     margin-right: 5px;
 }
 
 .YellowButton:hover {
-    background-color: #e6c97a;
-    color: #4b4e4b;
+    background-color: #F7D778;
+    color: #000;
 }
 
 .WhiteButton{
@@ -105,7 +130,7 @@ a:hover {
     border-radius: 30px;
     border-color: #333533;
     border-width: 1.5px;
-    font-family: 'Kanit', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
     font-weight: 400;
     margin-right: 5px;
@@ -121,7 +146,7 @@ a:hover {
     background-color: #333533;
     color: #ffffff;
     border-radius: 30px;
-    font-family: 'Kanit', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
     font-weight: 400;
     margin-right: 5px;
