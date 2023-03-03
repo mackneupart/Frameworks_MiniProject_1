@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const productName = urlParams.get("productName");
   const productPrice = urlParams.get("productPrice");
   const productImgSrc = urlParams.get("productImgSrc");
-  console.log(productImgSrc);
 
   document.getElementById("product-title").innerText = productName;
   document.getElementById("product-price").innerText = productPrice;
@@ -42,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // store the updated product count and cart data in local storage
     localStorage.setItem("productCount", productCount);
     localStorage.setItem("cartData", JSON.stringify(cartData));
-    getData();
   });
 });
 
@@ -85,6 +83,7 @@ function removeItem(divIdName) {
   localStorage.setItem("productCount", productItems.length);
   document.getElementById(divIdName).remove(); // remove the corresponding HTML element from the page
   getTotalAmount(); // update the total amount displayed on the page
+  getProductCount();
 }
 
 function addUserName() {
@@ -102,9 +101,36 @@ function addUserName() {
     x.style.display = "none";
   }
 }
-function saveData() {
-  let name = document.getElementById("productName");
-  let price = document.getElementById("productPrice");
+
+function getProductCount() {
+  document.getElementById("basketNumber").innerText = parseInt(
+    localStorage.getItem("productCount")
+  );
+}
+
+function sendParams() {
+  // Get all product cards
+  const productCards = document.querySelectorAll(".card");
+
+  // Loop through each card and modify the href attribute
+  productCards.forEach((card) => {
+    const productName = card.querySelector("#productName").textContent;
+    const productPrice = card.querySelector("#productPrice").textContent;
+    const productImgSrc = card
+      .querySelector(".product-img")
+      .getAttribute("src");
+    const urlParams = new URLSearchParams(
+      `productName=${encodeURIComponent(
+        productName
+      )}&productPrice=${encodeURIComponent(
+        productPrice
+      )}&productImgSrc=${encodeURIComponent(productImgSrc)}`
+    );
+    const href = card.querySelector("a").getAttribute("href");
+    card
+      .querySelector("a")
+      .setAttribute("href", `${href}?${urlParams.toString()}`);
+  });
 }
 
 function getData() {
