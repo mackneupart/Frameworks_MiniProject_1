@@ -167,7 +167,7 @@ function setParams() {
   const productPrice = urlParams.get("productPrice");
   const productImgSrc = urlParams.get("productImgSrc");
 
-  // Setting the product values for the current item. 
+  // Setting the product values for the current item.
   document.getElementById("title-name").innerText = productName;
   document.getElementById("breadcrumb-update").innerText = productName;
   document.getElementById("product-title").innerText = productName;
