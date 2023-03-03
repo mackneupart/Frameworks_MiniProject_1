@@ -79,6 +79,7 @@ a:hover {
 
 .navbar{
     background-color: #F2BD2C !important;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.2);
 }
 
 .nav-link {
@@ -86,6 +87,7 @@ a:hover {
     color: #000 !important;
     margin-right: 5px;
     border-radius: 30px;
+    padding: 12px !important;
 
 }
 
@@ -95,6 +97,7 @@ a:hover {
     border-radius: 30px;
     font-weight: 400;
     margin-right: 5px;
+    padding: 12px !important;
 }
 
 .log-in-basket{
