@@ -43,7 +43,7 @@ function updateCartItems() {
     divIdName = i;
     newdiv.setAttribute("id", divIdName);
     newdiv.innerHTML =
-      '<li class="product-item d-flex justify-content-between lh-condensed"> <div class="purchase-item"><div><img src="/images/products/and1.jpeg" width="120px"></div><div><p class="product-name">' +
+      '<li class="product-item d-flex justify-content-between lh-condensed"> <div class="purchase-item"><div><img src="/images/products/and1.png" width="120px"></div><div><p class="product-name">' +
       title +
       '</p><p class="text-muted">ID: 127</p><button onclick="removeItem()">fjern fra kurv</button></div></div><span>1</span><span>' +
       price +
