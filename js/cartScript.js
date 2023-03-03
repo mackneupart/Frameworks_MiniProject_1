@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let cartData = JSON.parse(localStorage.getItem("cartData")) || [];
 
     // add the current product to the cart data array
-    cartData.push({ title: title, price: price, img: img });
+    cartData.push({ title: title, price: price, img: img, id: productCount });
 
     // store the updated product count and cart data in local storage
     localStorage.setItem("productCount", productCount);
@@ -56,9 +56,9 @@ function updateCartItems() {
     let price = productItmes[i].price;
     let img = productItmes[i].img;
     newdiv = document.createElement("div");
-    divIdName = i;
+    divIdName = i + 1;
     newdiv.setAttribute("id", divIdName);
-    newdiv.innerHTML = `<li class="product-item d-flex justify-content-between lh-condensed"> <div class="purchase-item"><div><img src="${img}" width="120px"></div><div><p class="product-name">${title}</p><p class="text-muted">ID: 127</p><button onclick="removeItem()">fjern fra kurv</button></div></div><span>1</span><span>
+    newdiv.innerHTML = `<li class="product-item d-flex justify-content-between lh-condensed"> <div class="purchase-item"><div><img src="${img}" width="120px"></div><div><p class="product-name">${title}</p><p class="text-muted">ID: 127</p><button onclick="removeItem(${divIdName})">fjern fra kurv</button></div></div><span>1</span><span>
       ${price}</span></li>`;
     document.getElementById("product-update-script").appendChild(newdiv);
   }
@@ -75,15 +75,16 @@ function getTotalAmount() {
   }
   document.getElementById("totalAmount").innerText = totalAmount;
 }
+function removeItem(divIdName) {
+  let productItems = JSON.parse(localStorage.cartData);
 
-//sletter lige pt alle elementerne fra kurven
-function removeItem() {
-  let productItmes = JSON.parse(localStorage.cartData);
-  for (let i = 0; i < productItmes.length; i++) {
-    let d = document.getElementById("product-update-script");
-    let d_nested = document.getElementById(i);
-    d.removeChild(d_nested);
-  }
+  // Filter out the item with the specified divIdName
+  productItems = productItems.filter((item) => item.id !== divIdName);
+
+  localStorage.setItem("cartData", JSON.stringify(productItems)); // update local storage with the new array
+  localStorage.setItem("productCount", productItems.length);
+  document.getElementById(divIdName).remove(); // remove the corresponding HTML element from the page
+  getTotalAmount(); // update the total amount displayed on the page
 }
 
 function addUserName() {
@@ -108,4 +109,5 @@ function saveData() {
 
 function getData() {
   addUserName();
+  updateCartItems();
 }
