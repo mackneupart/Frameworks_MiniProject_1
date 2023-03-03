@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // store the updated product count and cart data in local storage
     localStorage.setItem("productCount", productCount);
     localStorage.setItem("cartData", JSON.stringify(cartData));
+    getData();
   });
 });
 
@@ -106,6 +107,5 @@ function saveData() {
 }
 
 function getData() {
-  updateCartItems();
   addUserName();
 }
