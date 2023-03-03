@@ -3,15 +3,6 @@ function getName() {
   return name;
 }
 
-function myFunction() {
-  var x = document.getElementById("myDIV");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-
 function addUserName() {
   const userName = window.localStorage.getItem("name");
   if (userName !== null) {
@@ -176,6 +167,9 @@ function setParams() {
   const productPrice = urlParams.get("productPrice");
   const productImgSrc = urlParams.get("productImgSrc");
 
+  // Setting the product values for the current item. 
+  document.getElementById("title-name").innerText = productName;
+  document.getElementById("breadcrumb-update").innerText = productName;
   document.getElementById("product-title").innerText = productName;
   document.getElementById("product-price").innerText = productPrice;
   document.querySelector(".product-img").setAttribute("src", productImgSrc);
