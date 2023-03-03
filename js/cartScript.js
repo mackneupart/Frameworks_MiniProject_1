@@ -103,9 +103,12 @@ function addUserName() {
 }
 
 function getProductCount() {
-  document.getElementById("basketNumber").innerText = parseInt(
-    localStorage.getItem("productCount")
-  );
+  // get the number button element
+  const numberBtn = document.getElementById("basketNumber");
+  // retrieve the product count from local storage, or initialize it to 0 if it's not present
+  let productCount = localStorage.getItem("productCount") || 0;
+  // set the initial value of the number button
+  numberBtn.innerText = productCount;
 }
 
 function sendParams() {
