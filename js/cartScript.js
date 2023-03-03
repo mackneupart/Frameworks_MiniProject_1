@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const productPrice = urlParams.get("productPrice");
   const productImgSrc = urlParams.get("productImgSrc");
 
+  document.getElementById("breadcrumb-update").innerText = productName;
   document.getElementById("product-title").innerText = productName;
   document.getElementById("product-price").innerText = productPrice;
   document.querySelector(".product-img").setAttribute("src", productImgSrc);
