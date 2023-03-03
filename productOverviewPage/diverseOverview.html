@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="./productOverview.css">
     <script src="../script.js"></script>
+    <script src="../js/cartScript.js"></script>
 
 
     <title>Document</title>
@@ -64,7 +65,7 @@
                         <button class="btn btn-outline-dark" type="submit">
                             <i class="bi-cart-fill me-1"></i>
                             Kurv
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                            <span id="basketNumber" class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                         </button>
                     </form>
                 </div>
@@ -78,7 +79,7 @@
                     <div class="col">
                         <div class="card">
                             <!-- Product image-->
-                            <img class="product-img" src="/images/products/and3.jpeg" alt="..." />
+                            <img class="product-img" src="/images/products/and3.png" alt="..." />
                             <!-- Product details-->
                             <div class="card-body">
                                 <div class="text-center">
@@ -98,7 +99,7 @@
                     <div class="col">
                         <div class="card">
                             <!-- Product image-->
-                            <img class="product-img" src="/images/products/and4.jpeg" alt="..." />
+                            <img class="product-img" src="/images/products/and4.png" alt="..." />
                             <!-- Product details-->
                             <div class="card-body">
                                 <div class="text-center">
@@ -118,7 +119,7 @@
                     <div class="col">
                         <div class="card">
                             <!-- Product image-->
-                            <img class="product-img" src="/images/products/and7.jpeg" alt="..." />
+                            <img class="product-img" src="/images/products/and7.png" alt="..." />
                             <!-- Product details-->
                             <div class="card-body">
                                 <div class="text-center">
@@ -154,7 +155,10 @@
         </footer>
     </div>
     <script>
-        document.body.onload = addUserName();
+        document.body.onload =
+            addUserName();
+            getProductCount();
+            sendParams(); 
     </script>
 </body>
 </html>

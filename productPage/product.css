@@ -10,7 +10,8 @@ body {
 
 /* Main product image*/ 
 .product-image {
-    width: 100%;
+    margin-left: 60px;
+    width: 60%;
 }
 
 .image-list {
