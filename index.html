@@ -50,7 +50,7 @@
                     </li>
                     <li class="nav-item"><a class="nav-link" href="#!">Om Badeanden</a></li>
                 </ul>
-                <span class="welcome-text"id="welcome-text">error</span>
+                <h6 class="welcome-text"id="welcome-text">error</h6>
                 <form action="./loginPage/login.html" class="d-flex">
                     <button class="WhiteButton btn" type="submit" id="login-btn">
                         <i class="bi-cart-fill me-1"></i>
@@ -184,6 +184,11 @@
         </div>
         <!-- Copyright -->
     </footer>
-    <script>document.body.onload = addUserName();</script>
+    <script>
+        document.body.onload =
+            addUserName();
+            getProductCount();
+            sendParams(); 
+    </script>
 </body>
 </html>
