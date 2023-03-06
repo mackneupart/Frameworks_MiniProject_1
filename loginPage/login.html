@@ -25,18 +25,18 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
+                                data-bs-toggle="dropdown" aria-expanded="false">Kategorier</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="../productOverviewPage/productOverview.html">All
-                                        products</a></li>
+                                <li><a class="dropdown-item" href="../productOverviewPage/productOverview.html">Alle
+                                        produkter</a></li>
                                 <li>
                                     <hr class="dropdown-divider" />
                                 </li>
-                                <li><a class="dropdown-item" href="../productOverviewPage/erhvervOverview.html">Professions</a>
+                                <li><a class="dropdown-item" href="../productOverviewPage/erhvervOverview.html">Erhverv</a>
                                 </li>
-                                <li><a class="dropdown-item" href="../productOverviewPage/fastelavnOverview.html">Carnival</a>
+                                <li><a class="dropdown-item" href="../productOverviewPage/fastelavnOverview.html">Fastelavn</a>
                                 </li>
-                                <li><a class="dropdown-item" href="../productOverviewPage/diverseOverview.html">Various ducks</a>
+                                <li><a class="dropdown-item" href="../productOverviewPage/diverseOverview.html">Diverse</a>
                                 </li>
                             </ul>
                         </li>
@@ -66,7 +66,7 @@
                     <form action="../cartPage/cart.html" class="d-flex">
                         <button class="btn YellowButton" type="submit">
                             <i class="bi-cart-fill me-1"></i>
-                            Basket
+                            Kurv
                             <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                         </button>
                     </form>
@@ -77,20 +77,20 @@
             <section class="login-section">
                 <form action="../index.html">
                     <img src="../images/logo/duck_logo_placeholder.svg" alt width="72px">
-                    <h1>Become a member!</h1>
+                    <h1>Bliv medlem!</h1>
                     <div class="form-floating">
                         <input type="text" class="form-control" name="name" id="name" required>
-                        <label for="name">Type in your navn:</label>
+                        <label for="name">Indtast dit navn:</label>
                     </div>
                     <div class="form-floating">
                         <input type="password" class="form-control" name="name" id="password" required>
-                        <label for="password">Type in password:</label>
+                        <label for="password">Indtast en adgangskode:</label>
                     </div>
                     <div class="checkbox m-3">
                         <input type="checkbox" id="checkbox" value="remember-me">
-                        <label for="checkbox">Remember me</label>
+                        <label for="checkbox">Husk mig</label>
                     </div>
-                    <button type="submit" class="BlackButton btn" onclick="store()">Register now!</button>
+                    <button type="submit" class="BlackButton btn" onclick="store()">Registrer nu!</button>
                 </form>
             </section>
         </main>
@@ -98,7 +98,13 @@
             <!-- Copyright -->
             <div class="text-center p-3 h6" style="background-color: #E8EDDF">
               © 2023 Copyright:
-              <span>TheRubberDuck.dk</span>
+              <span>Bade-Anden.dk</span>
+              <form action="./styleguide.html" class="d-flex">
+                <button class="BlackButton btn" type="submit">
+                    <i class="bi-cart-fill me-1"></i>
+                    Styleguide overview
+                </button>  
+            </form>
             </div>
             <!-- Copyright -->
           </footer>

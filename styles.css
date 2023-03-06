@@ -115,7 +115,7 @@ a:hover {
 .YellowButton{
     background-color: #F2BD2C;
     color: #000;
-    border-radius: 30px ;
+    border-radius: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -148,7 +148,7 @@ a:hover {
 .BlackButton{
     background-color: #333533;
     color: #ffffff;
-    border-radius: 30px !important;
+    border-radius: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -156,8 +156,10 @@ a:hover {
 }
 
 .BlackButton:hover {
-    background-color: #F7D778;
+    background-color: #ffffff;
     color: #333533;
+    border-color: #807d7d;
+    border-width: 1.5px;
 }
 
 /*General styling*/
