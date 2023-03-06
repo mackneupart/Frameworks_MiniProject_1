@@ -64,7 +64,7 @@ function updateCart() {
   productItems.forEach((item) => {
     newdiv = document.createElement("div");
     newdiv.setAttribute("id", item.id);
-    newdiv.innerHTML = `<li class="product-item d-flex justify-content-between lh-condensed"> <div class="purchase-item"><div><img src="${item.img}" width="120px"></div><div><p class="product-name">${item.title}</p><p class="text-muted">ID: 127</p><button onclick="removeItem(${item.id})">fjern fra kurv</button></div></div><span>1</span><span>
+    newdiv.innerHTML = `<li class="product-item d-flex justify-content-between lh-condensed"> <div class="purchase-item"><div><img src="${item.img}" width="120px"></div><div><p class="product-name">${item.title}</p><p class="text-muted">ID: 127</p><button class="WhiteButton" onclick="removeItem(${item.id})">Remove</button></div></div><span>1</span><span>
       ${item.price}</span></li>`;
     document.getElementById("product-update-script").appendChild(newdiv);
   });
