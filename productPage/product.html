@@ -12,9 +12,8 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="./product.css">
-    <script type="text/javascript" src="../script.js"></script>
-    <script type="text/javascript" src="../js/cartScript.js"></script>
-    <title>Product 1</title>
+    <script src="../script.js"></script>
+    <title id="title-name">Product 1</title>
 </head>
 
 <body>
@@ -247,6 +246,6 @@
         </div>
         <!-- Copyright -->
     </footer>
-    <script>document.body.onload = addUserName();</script>
+    <script>document.body.onload = addUserName(); setParams(); saveProduct(); getProductCount();</script>
 </body>
 </html>
