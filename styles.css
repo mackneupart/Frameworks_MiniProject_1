@@ -71,7 +71,7 @@ a:hover {
 
 .navbar-brand {
     color: rgb(0, 0, 0) !important;
-    font-family: 'Mynerve', cursive;
+    font-family: 'Mynerve', cursive !important;
     font-style: oblique;
     font-size: 24px;
 }

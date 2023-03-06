@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Mynerve&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="./login.css">
     <script src="../script.js"></script>
@@ -13,14 +14,13 @@
 </head>
 <body>
     <div class="wrapper">
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
             <div class="container px-4 px-lg-5">
-                <img class="logo-img" src="/images/badeand-logo.jpeg" alt="">
-                <a class="navbar-brand" href="../index.html">Badeanden</a>
-                <!--Something weird about this toggler. Has to change design somehow???-->
-                <button class="navbar-toggler WhiteButton btn" type="button" data-bs-toggle="collapse"
+                <img class="logo-img" src="/images/Badeanden_logo-02.png" alt="">
+                <a class="navbar-brand" href="./index.html"> The Rubber Duck</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation"><span class="navbar-toggler-icon">Menu</span></button>
+                    aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item dropdown">
@@ -40,19 +40,34 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Om Badeanden</a></li>
+                        <form action="https://en.wikipedia.org/wiki/Rubber_duck" class="d-flex">
+                            <button class="about-btn btn YellowButton" type="submit" id="about-btn">
+                                <i class="bi-cart-fill me-1"></i>
+                                About Rubber Ducks
+                            </button>
+                        </form>
                     </ul>
-                    <form action="./loginPage/login.html" class="d-flex">
-                        <button class="YellowButton btn" type="submit">
+                    <!-- <form action="./loginPage/login.html" class="d-flex">
+                        <button class="login-btn btn YellowButton" type="submit" id="login-btn">
                             <i class="bi-cart-fill me-1"></i>
                             Login
                         </button>
-                    </form>
-                    <form action="./cartPage/cart.html" class="d-flex">
-                        <button class="YellowButton btn" type="submit">
+                    </form> -->
+                    <button class="logout-btn btn YellowButton" id="logout-btn" onclick="logout()">
+                        <i class="bi-cart-fill me-1"></i>
+                        Logout
+                    </button>
+    
+                    <!-- Kurv icon i stedet for knap <div>
+                       <a href="./cartPage/cart.html"><img src="./images/basket-icon.png" width="40px"></a> 
+                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+    
+                    </div> -->
+                    <form action="../cartPage/cart.html" class="d-flex">
+                        <button class="btn YellowButton" type="submit">
                             <i class="bi-cart-fill me-1"></i>
                             Kurv
-                            <span class="badge bg-light text-dark ms-1 rounded-pill">0</span>
+                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                         </button>
                     </form>
                 </div>
