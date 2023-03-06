@@ -58,30 +58,31 @@ function saveProduct() {
 }
 
 //updating the cart page to show the items saved in the basket(local storage)
-function updateCartItems() {
-  let productItmes = JSON.parse(localStorage.cartData);
+function updateCart() {
+  let productItems = JSON.parse(localStorage.cartData);
   let newdiv;
-  let divIdName;
-  for (let i = 0; i < productItmes.length; i++) {
-    let title = productItmes[i].title;
-    let price = productItmes[i].price;
-    let img = productItmes[i].img;
+  let divIdName = 0;
+  productItems.forEach((item) => {
+    console.log(item.title);
+    let title = item.title;
+    let price = item.price;
+    let img = item.img;
     newdiv = document.createElement("div");
-    divIdName = i + 1;
+    divIdName++;
     newdiv.setAttribute("id", divIdName);
     newdiv.innerHTML = `<li class="product-item d-flex justify-content-between lh-condensed"> <div class="purchase-item"><div><img src="${img}" width="120px"></div><div><p class="product-name">${title}</p><p class="text-muted">ID: 127</p><button onclick="removeItem(${divIdName})">fjern fra kurv</button></div></div><span>1</span><span>
       ${price}</span></li>`;
     document.getElementById("product-update-script").appendChild(newdiv);
-  }
+  });
   getTotalAmount();
 }
 
 //calculating the total price of the items
 function getTotalAmount() {
-  let productItmes = JSON.parse(localStorage.cartData);
+  let productItems = JSON.parse(localStorage.cartData);
   let totalAmount = 0;
-  for (let i = 0; i < productItmes.length; i++) {
-    let price = productItmes[i].price;
+  for (let i = 0; i < productItems.length; i++) {
+    let price = productItems[i].price;
     let intPrice = parseInt(price);
     totalAmount += intPrice;
   }
