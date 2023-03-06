@@ -75,11 +75,7 @@ function updateCart() {
 function getTotalAmount() {
   let productItems = JSON.parse(localStorage.cartData);
   let totalAmount = 0;
-  for (let i = 0; i < productItems.length; i++) {
-    let price = productItems[i].price;
-    let intPrice = parseInt(price);
-    totalAmount += intPrice;
-  }
+  productItems.forEach((item) => (totalAmount += parseInt(item.price)));
   document.getElementById("totalAmount").innerText = totalAmount;
 }
 
