@@ -61,17 +61,11 @@ function saveProduct() {
 function updateCart() {
   let productItems = JSON.parse(localStorage.cartData);
   let newdiv;
-  let divIdName = 0;
   productItems.forEach((item) => {
-    console.log(item.title);
-    let title = item.title;
-    let price = item.price;
-    let img = item.img;
     newdiv = document.createElement("div");
-    divIdName++;
-    newdiv.setAttribute("id", divIdName);
-    newdiv.innerHTML = `<li class="product-item d-flex justify-content-between lh-condensed"> <div class="purchase-item"><div><img src="${img}" width="120px"></div><div><p class="product-name">${title}</p><p class="text-muted">ID: 127</p><button onclick="removeItem(${divIdName})">fjern fra kurv</button></div></div><span>1</span><span>
-      ${price}</span></li>`;
+    newdiv.setAttribute("id", item.id);
+    newdiv.innerHTML = `<li class="product-item d-flex justify-content-between lh-condensed"> <div class="purchase-item"><div><img src="${item.img}" width="120px"></div><div><p class="product-name">${item.title}</p><p class="text-muted">ID: 127</p><button onclick="removeItem(${item.id})">fjern fra kurv</button></div></div><span>1</span><span>
+      ${item.price}</span></li>`;
     document.getElementById("product-update-script").appendChild(newdiv);
   });
   getTotalAmount();
