@@ -42,14 +42,14 @@
                         </li>
                         <li class="nav-item"><a class="nav-link" href="#!">About The Rubber Duck</a></li>
                     </ul>
-                    <span class="welcome-text"id="welcome-text"></span>
+                    <h6 class="welcome-text"id="welcome-text">error</h6>
                     <form action="../loginPage/login.html" class="d-flex">
                         <button class="login-btn btn YellowButton" type="submit" id="login-btn">
                             <i class="bi-cart-fill me-1"></i>
                             Login
                         </button>
                     </form>
-                    <button class="logout-btn btn btn-outline-dark" id="logout-btn" onclick="logout()">
+                    <button class="logout-btn btn YellowButton" id="logout-btn" onclick="logout()">
                         <i class="bi-cart-fill me-1"></i>
                         Logout
                     </button>
@@ -122,8 +122,8 @@
 </div>
 <script>
     document.body.onload =
-        updateCart();
         addUserName();
+        updateCart();
         getProductCount();
         sendParams(); </script>
 </body>
