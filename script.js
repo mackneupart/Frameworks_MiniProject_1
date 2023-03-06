@@ -1,8 +1,3 @@
-function getName() {
-  let name = localStorage.name;
-  return name;
-}
-
 function addUserName() {
   const userName = window.localStorage.getItem("name");
   if (userName !== null) {
@@ -28,13 +23,14 @@ function logout() {
   window.location.reload();
 }
 
+//Saves title, price, img src and number of products in the basket to local storage
 function saveProduct() {
+  //retreiving the img src from the URL params
   const urlParams = new URLSearchParams(window.location.search);
   const productImgSrc = urlParams.get("productImgSrc");
 
   // get the number button element
   const numberBtn = document.getElementById("basketNumber");
-
   // retrieve the product count from local storage, or initialize it to 0 if it's not present
   let productCount = localStorage.getItem("productCount");
 
@@ -61,62 +57,39 @@ function saveProduct() {
   });
 }
 
-// Updating the items of products on the cart page -> the functions is being run on the cart.html page
-function updateCartItems() {
-  let productItmes = JSON.parse(localStorage.cartData);
+//updating the cart page to show the items saved in the basket(local storage)
+function updateCart() {
+  let productItems = JSON.parse(localStorage.cartData);
   let newdiv;
-  let divIdName;
-  for (let i = 0; i < productItmes.length; i++) {
-    let title = productItmes[i].title;
-    let price = productItmes[i].price;
-    let img = productItmes[i].img;
+  productItems.forEach((item) => {
     newdiv = document.createElement("div");
-    divIdName = i + 1;
-    newdiv.setAttribute("id", divIdName);
-    newdiv.innerHTML = `<li class="product-item d-flex justify-content-between lh-condensed"> <div class="purchase-item"><div><img src="${img}" width="120px"></div><div><p class="product-name">${title}</p><p class="text-muted">ID: 127</p><button onclick="removeItem(${divIdName})">fjern fra kurv</button></div></div><span>1</span><span>
-      ${price}</span></li>`;
+    newdiv.setAttribute("id", item.id);
+    newdiv.innerHTML = `<li class="product-item d-flex justify-content-between lh-condensed"> <div class="purchase-item"><div><img src="${item.img}" width="120px"></div><div><p class="product-name">${item.title}</p><p class="text-muted">ID: 127</p><button onclick="removeItem(${item.id})">fjern fra kurv</button></div></div><span>1</span><span>
+      ${item.price}</span></li>`;
     document.getElementById("product-update-script").appendChild(newdiv);
-  }
+  });
   getTotalAmount();
 }
 
+//calculating the total price of the items
 function getTotalAmount() {
-  let productItmes = JSON.parse(localStorage.cartData);
+  let productItems = JSON.parse(localStorage.cartData);
   let totalAmount = 0;
-  for (let i = 0; i < productItmes.length; i++) {
-    let price = productItmes[i].price;
-    let intPrice = parseInt(price);
-    totalAmount += intPrice;
-  }
+  productItems.forEach((item) => (totalAmount += parseInt(item.price)));
   document.getElementById("totalAmount").innerText = totalAmount;
 }
+
+//Removes the item from the basket and updates number of products and the total price
 function removeItem(divIdName) {
   let productItems = JSON.parse(localStorage.cartData);
 
-  // Filter out the item with the specified divIdName
-  productItems = productItems.filter((item) => item.id !== divIdName);
+  filteredProductItems = productItems.filter((item) => item.id !== divIdName); // removes the item from the array
 
-  localStorage.setItem("cartData", JSON.stringify(productItems)); // update local storage with the new array
-  localStorage.setItem("productCount", productItems.length);
+  localStorage.setItem("cartData", JSON.stringify(filteredProductItems)); // update local storage with the new array
+  localStorage.setItem("productCount", filteredProductItems.length);
   document.getElementById(divIdName).remove(); // remove the corresponding HTML element from the page
   getTotalAmount(); // update the total amount displayed on the page
-  getProductCount();
-}
-
-function addUserName() {
-  const userName = window.localStorage.getItem("name");
-  if (userName !== null) {
-    document.getElementById("welcome-text").innerHTML =
-      "Goddag " + userName + "!";
-    let x = document.getElementById("login-btn");
-    x.style.display = "none";
-    let y = document.getElementById("logout-btn");
-    y.style.display = "block";
-  } else {
-    document.getElementById("welcome-text").innerHTML = "";
-    let x = document.getElementById("logout-btn");
-    x.style.display = "none";
-  }
+  getProductCount(); // update the productCount number displayed
 }
 
 function getProductCount() {
@@ -153,12 +126,7 @@ function sendParams() {
   });
 }
 
-function getData() {
-  addUserName();
-  updateCartItems();
-}
-
-function setParams() {
+function getProductInfo() {
   // Get the URL parameters
   const urlParams = new URLSearchParams(window.location.search);
 
@@ -167,7 +135,7 @@ function setParams() {
   const productPrice = urlParams.get("productPrice");
   const productImgSrc = urlParams.get("productImgSrc");
 
-  // Setting the product values for the current item. 
+  // Setting the product values for the current item.
   document.getElementById("title-name").innerText = productName;
   document.getElementById("breadcrumb-update").innerText = productName;
   document.getElementById("product-title").innerText = productName;
