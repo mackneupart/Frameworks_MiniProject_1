@@ -1,15 +1,13 @@
 function addUserName() {
   const userName = window.localStorage.getItem("name");
   if (userName !== null) {
-    console.log("if statemnet")
     document.getElementById("welcome-text").innerHTML =
-      "Hi " + userName + "!";
+      "Goddag " + userName + "!";
     let x = document.getElementById("login-btn");
     x.style.display = "none";
     let y = document.getElementById("logout-btn");
     y.style.display = "block";
   } else {
-    console.log("elsse staement")
     document.getElementById("welcome-text").innerHTML = "";
     let x = document.getElementById("logout-btn");
     x.style.display = "none";
