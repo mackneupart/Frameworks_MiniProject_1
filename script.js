@@ -1,8 +1,3 @@
-function getName() {
-  let name = localStorage.name;
-  return name;
-}
-
 function addUserName() {
   const userName = window.localStorage.getItem("name");
   if (userName !== null) {
@@ -28,13 +23,14 @@ function logout() {
   window.location.reload();
 }
 
+//Saves title, price, img src and number of products in the basket to local storage
 function saveProduct() {
+  //retreiving the img src from the URL params
   const urlParams = new URLSearchParams(window.location.search);
   const productImgSrc = urlParams.get("productImgSrc");
 
   // get the number button element
   const numberBtn = document.getElementById("basketNumber");
-
   // retrieve the product count from local storage, or initialize it to 0 if it's not present
   let productCount = localStorage.getItem("productCount");
 
@@ -61,7 +57,7 @@ function saveProduct() {
   });
 }
 
-// Updating the items of products on the cart page -> the functions is being run on the cart.html page
+//updating the cart page to show the items saved in the basket(local storage)
 function updateCartItems() {
   let productItmes = JSON.parse(localStorage.cartData);
   let newdiv;
@@ -80,6 +76,7 @@ function updateCartItems() {
   getTotalAmount();
 }
 
+//calculating the total price of the items
 function getTotalAmount() {
   let productItmes = JSON.parse(localStorage.cartData);
   let totalAmount = 0;
@@ -90,33 +87,18 @@ function getTotalAmount() {
   }
   document.getElementById("totalAmount").innerText = totalAmount;
 }
+
+//Removes the item from the basket and updates number of products and the total price
 function removeItem(divIdName) {
   let productItems = JSON.parse(localStorage.cartData);
 
-  // Filter out the item with the specified divIdName
-  productItems = productItems.filter((item) => item.id !== divIdName);
+  filteredProductItems = productItems.filter((item) => item.id !== divIdName); // removes the item from the array
 
-  localStorage.setItem("cartData", JSON.stringify(productItems)); // update local storage with the new array
-  localStorage.setItem("productCount", productItems.length);
+  localStorage.setItem("cartData", JSON.stringify(filteredProductItems)); // update local storage with the new array
+  localStorage.setItem("productCount", filteredProductItems.length);
   document.getElementById(divIdName).remove(); // remove the corresponding HTML element from the page
   getTotalAmount(); // update the total amount displayed on the page
-  getProductCount();
-}
-
-function addUserName() {
-  const userName = window.localStorage.getItem("name");
-  if (userName !== null) {
-    document.getElementById("welcome-text").innerHTML =
-      "Goddag " + userName + "!";
-    let x = document.getElementById("login-btn");
-    x.style.display = "none";
-    let y = document.getElementById("logout-btn");
-    y.style.display = "block";
-  } else {
-    document.getElementById("welcome-text").innerHTML = "";
-    let x = document.getElementById("logout-btn");
-    x.style.display = "none";
-  }
+  getProductCount(); // update the productCount number displayed
 }
 
 function getProductCount() {
@@ -153,12 +135,7 @@ function sendParams() {
   });
 }
 
-function getData() {
-  addUserName();
-  updateCartItems();
-}
-
-function setParams() {
+function getProductInfo() {
   // Get the URL parameters
   const urlParams = new URLSearchParams(window.location.search);
 
