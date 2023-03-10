@@ -41,8 +41,20 @@
     margin-bottom: 15px;
 }
 
-#myCarousel {
+/* #myCarousel {
     margin-top: 50px;
+} */
+.carousel-control-next{
+    width: 50px;
+}
+.carousel-control-prev{
+    width: 50px;
+}
+.card{
+    border: none;
+}
+.new-add-products{
+    font-size: 40px;
 }
 
 @media (max-width: 768px) {
