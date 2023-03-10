@@ -9,19 +9,22 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,500;1,100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,500;1,100&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mynerve&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-        <script src="./script.js"></script>
+    <script src="./script.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="index.css">
     <title>The Rubber Duck</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container px-4 px-lg-5">
             <img class="logo-img" src="/images/Badeanden_logo-02.png" alt="">
             <a class="navbar-brand" href="./index.html"> The Rubber Duck</a>
@@ -54,7 +57,7 @@
                         </button>
                     </form>
                 </ul>
-                <h6 class="welcome-text"id="welcome-text">error</h6>
+                <h6 class="welcome-text" id="welcome-text">error</h6>
                 <form action="./loginPage/login.html" class="d-flex">
                     <button class="login-btn btn YellowButton" type="submit" id="login-btn">
                         <i class="bi-cart-fill me-1"></i>
@@ -155,6 +158,156 @@
     </section>
 
     <section>
+        <div class="text-center"><h6 class="new-add-products">Newly added ducks</h6></div>
+        <div id="myCarousel" class="carousel slide container" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <!-- <div class="col-md-3"> -->
+                        <div class="card card-body">
+                            <!-- Product image-->
+                            <img class="product-img" src="/images/products/and3.png"/>
+                            <!-- Product details-->                        
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder" id="productName">Unicorn</h5>
+                                    <!-- Product price-->
+                                    <span><span id="productPrice">20</span> DKK</span>
+                                </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn YellowButton mt-auto"
+                                        href="../productPage/product.html" onclick="sendParamsIndex()">See product</a>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                </div>
+
+                <div class="carousel-item">
+                    <!-- <div class="col-md-3"> -->
+                        <div class="card card-body">
+                            <!-- Product image-->
+                            <img class="product-img" src="/images/products/and7.png"/>
+                            <!-- Product details-->
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder" id="productName">Cook</h5>
+                                    <!-- Product price-->
+                                    <span><span id="productPrice">100</span> DKK</span>
+                                </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn YellowButton mt-auto"
+                                        href="../productPage/product.html" onclick="sendParamsIndex()">See product</a>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                </div>
+
+                <div class="carousel-item">
+                    <!-- <div class="col-md-3"> -->
+                        <div class="card card-body">
+                            <!-- Product image-->
+                            <img class="product-img" src="/images/products/and1.png"/>
+                            <!-- Product details-->
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder" id="productName">Viking</h5>
+                                    <!-- Product price-->
+                                    <span><span id="productPrice">20</span> DKK</span>
+                                </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn YellowButton mt-auto"
+                                        href="../productPage/product.html" onclick="sendParamsIndex()">See product</a>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                </div>
+
+                <div class="carousel-item">
+                    <!-- <div class="col-md-3"> -->
+                        <div class="card card-body">
+                            <!-- Product image-->
+                            <img class="product-img" src="/images/products/and3.png"/>
+                            <!-- Product details-->
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder" id="productName">Unicorn</h5>
+                                    <!-- Product price-->
+                                    <span><span id="productPrice">15</span> DKK</span>
+                                </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn YellowButton mt-auto"
+                                        href="../productPage/product.html" onclick="sendParamsIndex()">See product</a>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                </div>
+
+                <div class="carousel-item">
+                    <!-- <div class="col-md-3"> -->
+                        <div class="card card-body">
+                            <!-- Product image-->
+                            <img class="product-img" src="/images/products/and7.png"/>
+                            <!-- Product details-->
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder" id="productName">Cook</h5>
+                                    <!-- Product price-->
+                                    <span><span id="productPrice">100</span> DKK</span>
+                                </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn YellowButton mt-auto"
+                                        href="../productPage/product.html" onclick="sendParamsIndex()">See product</a>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                </div>
+
+                <div class="carousel-item">
+                    <!-- <div class="col-md-3"> -->
+                        <div class="card card-body">
+                            <!-- Product image-->
+                            <img class="product-img" src="/images/products/and4.png"/>
+                            <!-- Product details-->
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder" id="productName">Scoccer</h5>
+                                    <!-- Product price-->
+                                    <span><span id="productPrice">15</span> DKK</span>
+                                </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn YellowButton mt-auto"
+                                        href="../productPage/product.html" onclick="sendParamsIndex()">See product</a>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+            <button class="carousel-control-prev YellowButton" type="button" data-bs-target="#myCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next YellowButton" type="button" data-bs-target="#myCarousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <section>
         <div class="about-section row row-cols-1 row-cols-md-1 row-cols-lg-2">
             <div class="col">
                 <img class="about-img" src="/images/AboutRubberDuck.png" alt="">
@@ -163,12 +316,21 @@
                 <h4>
                     About rubber ducks?
                 </h4>
-                <p><span style="font-weight: bold;">Rubber ducks</span> are an iconic bath toy that has brought joy to children and adults for decades. But where do they come from, and why are they so beloved?
-                    The story of rubber ducks begins in Germany in the early 20th century. Inspired by the rubber duck families that swam in the bathtubs of his childhood in Germany, a man named Peter Ganine created the first rubber duck in 1949 when he was living in New York. His version was smaller and more practical than the larger rubber duck families of his childhood.
+                <p><span style="font-weight: bold;">Rubber ducks</span> are an iconic bath toy that has brought joy to
+                    children and adults for decades. But where do they come from, and why are they so beloved?
+                    The story of rubber ducks begins in Germany in the early 20th century. Inspired by the rubber duck
+                    families that swam in the bathtubs of his childhood in Germany, a man named Peter Ganine created the
+                    first rubber duck in 1949 when he was living in New York. His version was smaller and more practical
+                    than the larger rubber duck families of his childhood.
                     <br>
-                    Ganine's first rubber duck was made of vinyl and had a small weight in the bottom to keep it upright. It was also equipped with a small whistle that made it fun to play with in the bathtub. The rubber duck was an immediate success, and soon other manufacturers began to copy Ganine's design.
+                    Ganine's first rubber duck was made of vinyl and had a small weight in the bottom to keep it
+                    upright. It was also equipped with a small whistle that made it fun to play with in the bathtub. The
+                    rubber duck was an immediate success, and soon other manufacturers began to copy Ganine's design.
                     <br>
-                    But why do rubber ducks make us so happy? Perhaps it's their simple, lively design, or maybe it's the feeling of nostalgia they bring with them. Whatever the reason, rubber ducks have become a beloved part of bath time routines all over the world, and a reminder of happy childhood moments.</p>
+                    But why do rubber ducks make us so happy? Perhaps it's their simple, lively design, or maybe it's
+                    the feeling of nostalgia they bring with them. Whatever the reason, rubber ducks have become a
+                    beloved part of bath time routines all over the world, and a reminder of happy childhood moments.
+                </p>
                 <a href="https://en.wikipedia.org/wiki/Rubber_duck">Read more about rubber ducks</a>
             </div>
         </div>
@@ -182,10 +344,14 @@
         </div>
         <!-- Copyright -->
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <script>
         document.body.onload =
             addUserName();
-            getProductCount();
+            sendParamsIndex();
+        getProductCount();
     </script>
 </body>
+
 </html>
