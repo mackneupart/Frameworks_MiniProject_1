@@ -165,7 +165,6 @@ function getProductInfo() {
   document.getElementById("product-title").innerText = productName;
   document.getElementById("product-price").innerText = productPrice;
   document.querySelector(".product-img").setAttribute("src", productImgSrc);
-  console.log("This has been run")
 }
 
 // $('.carousel .carousel-item').each(function () {

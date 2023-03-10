@@ -14,8 +14,6 @@
 </head>
 <body>
     <div class="wrapper">
-
-
         <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
             <div class="container px-4 px-lg-5">
                 <img class="logo-img" src="/images/Badeanden_logo-02.png" alt="">
@@ -60,17 +58,11 @@
                         <i class="bi-cart-fill me-1"></i>
                         Logout
                     </button>
-    
-                    <!-- Kurv icon i stedet for knap <div>
-                       <a href="./cartPage/cart.html"><img src="./images/basket-icon.png" width="40px"></a> 
-                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-    
-                    </div> -->
                     <form action="../cartPage/cart.html" class="d-flex">
                         <button class="btn YellowButton" type="submit">
                             <i class="bi-cart-fill me-1"></i>
                             Basket
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                            <span class="badge bg-dark text-white ms-1 rounded-pill" id="basketNumber">0</span>
                         </button>
                     </form>
                 </div>
@@ -149,12 +141,6 @@
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             © 2023 Copyright:
             <span>TheRubberDuck.dk</span>
-            <!-- <form action="../styleguide.html" class="d-flex">
-                <button class="login-btn btn btn-outline-dark" type="submit">
-                    <i class="bi-cart-fill me-1"></i>
-                    Styleguide overview
-                </button>
-            </form> -->
         </div>
         <!-- Copyright -->
     </footer>

@@ -10,10 +10,7 @@
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="./productOverview.css">
     <script src="../script.js"></script>
-    <script src="../js/cartScript.js"></script>
-
-
-    <title>Document</title>
+    <title>Various ducks</title>
 </head>
 <body>
     <div class="wrapper">
@@ -61,17 +58,11 @@
                         <i class="bi-cart-fill me-1"></i>
                         Logout
                     </button>
-    
-                    <!-- Kurv icon i stedet for knap <div>
-                       <a href="./cartPage/cart.html"><img src="./images/basket-icon.png" width="40px"></a> 
-                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-    
-                    </div> -->
                     <form action="../cartPage/cart.html" class="d-flex">
                         <button class="btn YellowButton" type="submit">
                             <i class="bi-cart-fill me-1"></i>
                             Basket
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                            <span class="badge bg-dark text-white ms-1 rounded-pill" id="basketNumber">0</span>
                         </button>
                     </form>
                 </div>
