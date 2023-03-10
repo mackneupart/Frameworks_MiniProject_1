@@ -125,6 +125,30 @@ function sendParams() {
       .setAttribute("href", `${href}?${urlParams.toString()}`);
   });
 }
+function sendParamsIndex() {
+  // Get all product cards
+  const carouselItems = document.querySelectorAll(".carousel-item");
+  // Get the values of the image source, product name, and product price
+
+  carouselItems.forEach((item) => {
+    const productName = item.querySelector("#productName").textContent;
+    const productPrice = item.querySelector("#productPrice").textContent;
+    const productImgSrc = item
+      .querySelector(".product-img")
+      .getAttribute("src");
+    const urlParams = new URLSearchParams(
+      `productName=${encodeURIComponent(
+        productName
+      )}&productPrice=${encodeURIComponent(
+        productPrice
+      )}&productImgSrc=${encodeURIComponent(productImgSrc)}`
+    );
+    const href = item.querySelector("a").getAttribute("href");
+    item
+      .querySelector("a")
+      .setAttribute("href", `${href}?${urlParams.toString()}`);
+  });
+}
 
 function getProductInfo() {
   // Get the URL parameters
@@ -150,12 +174,12 @@ function getProductInfo() {
 //   next = $(this).siblings(':first');
 //   }
 //   next.children(':first-child').clone().appendTo($(this));
-  
+
 //   for (var i = 0; i < minPerSlide; i++) {
-//     next=next.next(); 
-//     if (!next.length) { 
+//     next=next.next();
+//     if (!next.length) {
 //       next=$(this).siblings(':first');
 //     }
-//     next.children(':first-child').clone().appendTo($(this)); 
-//   } 
+//     next.children(':first-child').clone().appendTo($(this));
+//   }
 // });
